@@ -3,7 +3,10 @@ print("Content-Type: text/html; charset=utf-8\n")
 print()
 import cgi #'cgi라는 모듈을 사용하겠다''라고 파이썬에게 얘기해주는것
 form = cgi.FieldStorage()
-pageId = form["id"].value
+if 'id' in form:
+    pageId = form["id"].value
+else:
+    pageId = 'Welcome'
 print('''<!DOCTYPE html>
 <html>
   <head>
@@ -12,7 +15,7 @@ print('''<!DOCTYPE html>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h1><a href="index_no_id.py">WEB</a></h1>
+    <h1><a href="index.py">WEB</a></h1>
     <div id="grid">
       <ol>
         <li><a href="index.py?id=HTML">HTML</a></li>
