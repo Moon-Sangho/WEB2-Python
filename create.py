@@ -29,10 +29,11 @@ print('''<!DOCTYPE html>
         {listStr}
       </ol>
       <a href="create.py">create</a>
-      <div id="article">
-        <h2>{title}</h2>
-        <p>{desc}</p>
-      </div>
+      <form action="process_create.py" method="post">
+        <p><input type="text" name="title" placeholder="title"></p>
+        <p><textarea rows="4" name="description" placeholder="description"></textarea></p>
+        <p><input type="submit"></p>
+      </form>
     </div>
   </body>
 </html>'''.format(title=pageId, desc=description, listStr=listStr))
