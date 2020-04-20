@@ -1,2 +1,2 @@
 # WEB2-Python
-WEB1 original file
+Opentutorials_python_lecture notes
