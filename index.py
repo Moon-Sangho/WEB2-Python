@@ -28,11 +28,11 @@ print('''<!DOCTYPE html>
       <ol>
         {listStr}
       </ol>
-      <a href="create.py">create</a>
       <div id="article">
         <h2>{title}</h2>
         <p>{desc}</p>
       </div>
     </div>
+    <a href="create.py">create</a>
   </body>
 </html>'''.format(title=pageId, desc=description, listStr=listStr))
