@@ -2,8 +2,7 @@
 print("Content-Type: text/html; charset=utf-8\n")
 print()
 import cgi #'cgi라는 모듈을 사용하겠다''라고 파이썬에게 얘기해주는것
-form = cgi.FieldStorage()
-pageId = form["id"].value
+pageId = 'Welcome'
 print('''<!DOCTYPE html>
 <html>
   <head>
