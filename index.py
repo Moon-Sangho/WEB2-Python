@@ -1,14 +1,7 @@
 #!python
 print("Content-Type: text/html; charset=utf-8\n")
 print()
-import cgi, os #'cgi,os라는 모듈을 사용하겠다' 라고 파이썬에게 얘기해주는것
-
-def getList():
-    files = os.listdir('data')
-    listStr = ''
-    for item in files:
-        listStr = listStr + '<li><a href="index.py?id={name}">{name}</a></li>'.format(name=item)
-    return listStr
+import cgi, os, view
 
 form = cgi.FieldStorage()
 if 'id' in form:
@@ -52,6 +45,6 @@ print('''<!DOCTYPE html>
 '''.format(
     title=pageId,
     desc=description,
-    listStr=getList(),
+    listStr=view.getList(),
     update_link=update_link,
     delete_action=delete_action))
